@@ -1,14 +1,7 @@
-use std::collections::HashMap;
-
-use uuid::Uuid;
-
-use crate::client::{self, Client};
-
 pub struct User {
     nick_name: String,
     user_name: String,
     real_name: String,
-    //channels: Vec<String>,
 }
 
 impl User {
@@ -17,7 +10,6 @@ impl User {
             nick_name,
             user_name,
             real_name,
-            //channels: Vec::new(),
         }
     }
 
@@ -40,18 +32,6 @@ impl User {
     pub fn set_real_name(&mut self, real_name: String) {
         self.real_name = real_name;
     }
-
-    // pub fn channels(&self) -> &Vec<String> {
-    //     &self.channels
-    // }
-
-    // pub fn add_channel(&mut self, channel: String) {
-    //     self.channels.push(channel);
-    // }
-
-    // pub fn remove_channel(&mut self, channel: &str) {
-    //     self.channels.retain(|c| c != channel);
-    // }
 }
 
 impl Clone for User {
@@ -60,7 +40,6 @@ impl Clone for User {
             nick_name: self.nick_name.clone(),
             user_name: self.user_name.clone(),
             real_name: self.real_name.clone(),
-            // channels: self.channels.clone(),
         }
     }
 }

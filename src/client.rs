@@ -72,7 +72,7 @@ impl Client {
         self.stream.write_all(message.as_bytes())?;
 
         // Ensure all data is sent immediately
-        self.stream.flush() 
+        self.stream.flush()
     }
 
     pub fn id(&self) -> &Uuid {
