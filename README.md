@@ -23,13 +23,13 @@ To set the log level to `info` in bash, use:
 export RUST_LOG=info
 ```
 
-## Powershell
+#### Powershell
 To set the log level to `debug` in Powershell, use:
 ```
 $env:RUST_LOG="debug" 
 ```
 
-## Windows Command Prompt
+#### Windows Command Prompt
 To set the log level to `debug` in the Command Prompt, use:
 
 ```
