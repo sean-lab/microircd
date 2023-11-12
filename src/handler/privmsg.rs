@@ -13,7 +13,7 @@ pub fn handle_privmsg(
     // channel names start with #
     if target.starts_with("#") {
         let channel_store = server_context.channel_store.lock().unwrap();
-        let channel = channel_store.get_channel(&target);
+        let channel = channel_store.channel(&target);
 
         if channel.is_none() {
             let response = IrcErrorCode::ErrNoSuchChannel.error_message(&target);
@@ -24,7 +24,7 @@ pub fn handle_privmsg(
         // get all users in channel except sender
         let nick_names = channel
             .unwrap()
-            .get_users()
+            .users()
             .iter()
             .filter(|&x| x != &sender)
             .map(|x| x.to_string())

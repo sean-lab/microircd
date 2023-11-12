@@ -35,6 +35,6 @@ pub fn handle_join(client: &mut Client, channel_name: String, server_context: Ar
     let channel: &mut Channel = channel_store.get_or_create_channel(&channel_name);
     channel.add_user(nick_name.clone());
 
-    let response = format!(":{} JOIN :{}", nick_name, channel.get_name());
+    let response = format!(":{} JOIN :{}", nick_name, channel.name());
     let _ = client.send_response(&response);
 }

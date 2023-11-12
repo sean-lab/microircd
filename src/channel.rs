@@ -25,7 +25,7 @@ impl Channel {
         }
     }
 
-    pub fn get_name(&self) -> &str {
+    pub fn name(&self) -> &str {
         &self.name
     }
 
@@ -41,7 +41,7 @@ impl Channel {
         self.users.retain(|u| u != user);
     }
 
-    pub fn get_users(&self) -> Vec<String> {
+    pub fn users(&self) -> Vec<String> {
         self.users.clone()
     }
 }
@@ -120,7 +120,7 @@ impl ChannelStore {
         self.channels.remove(channel);
     }
 
-    pub fn get_channel(&self, channel: &str) -> Option<&Channel> {
-        self.channels.get(channel)
+    pub fn channel(&self, channel_name: &str) -> Option<&Channel> {
+        self.channels.get(channel_name)
     }
 }
