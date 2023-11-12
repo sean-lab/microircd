@@ -2,7 +2,7 @@
 Minimal IRC daemon in Rust
 
 ## Description
-microircd is a minimal implementation of an IRC daemon written in Rust. It is designed to be lightweight and easy to use, perfect for small-scale deployments or for development purposes.
+microircd is a minimal implementation of an IRC daemon written in Rust. 
 
 ## How to run microircd in dev env
 Run the following command to run microircd in a development environment:
