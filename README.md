@@ -78,3 +78,9 @@ Contributions to microircd are welcome! Please submit issues and pull requests t
 
 ## License
 microircd is released under the [MIT License](LICENSE).
+
+
+# TODO 
+- Add Unit Tests
+- Server to server
+- and so on ...
