@@ -16,7 +16,7 @@ fn main() {
     env_logger::init();
 
     // TODO: parameterize the address
-    let server = Server::new("127.0.0.1:6667");
+    let server = Server::new("0.0.0.0:6667");
     info!("starting server on {}", server.address());
     if let Err(e) = server.run() {
         error!("Failed to start server: {}", e);

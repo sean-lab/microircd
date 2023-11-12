@@ -54,6 +54,39 @@ carbo build --release
 
 This will produce an executable in the `target/release` directory.
 
+## Docker
+
+### Building the Docker Image
+
+To build a Docker image for microircd, you can use the provided Dockerfile. Here's how you can build the Docker image:
+
+```bash
+docker build -t microircd .
+```
+This command builds a Docker image using the Dockerfile in the current directory and tags the image as microircd.
+
+### Running the Docker Image
+After you've built the Docker image, you can run it with the following command:
+
+```bash
+docker run -it --rm microircd
+```
+
+This command builds a Docker image using the Dockerfile in the current directory and tags the image as microircd.
+
+### Running the Docker Image
+After you've built the Docker image, you can run it with the following command:
+
+This command runs the microircd Docker image. The -it option allows you to interact with the container via your terminal, and the --rm option automatically removes the container when it exits.
+
+If your application requires specific ports to be open, you can use the -p option to map ports from your host to the Docker container. For example, if your application listens on port 8080, you can map this port to port 8080 on your host like this:
+
+```bash
+docker run -it --rm -p 6667:6667 microircd
+```
+
+You can add this section to your README.md file to provide instructions on how to build and run your Docker image.
+
 ## Contributing
 Contributions to microircd are welcome! Please submit issues and pull requests through GitHub.
 
