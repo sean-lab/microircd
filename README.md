@@ -55,7 +55,7 @@ carbo build --release
 This will produce an executable in the `target/release` directory.
 
 ## Contributing
-Contributions to microircd are welcome! Please submit issues and pull requests through GitHub, and ensure that your code adheres to the project's code style guidelines.
+Contributions to microircd are welcome! Please submit issues and pull requests through GitHub.
 
 ## License
 microircd is released under the [MIT License](LICENSE).
